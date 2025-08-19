@@ -1,5 +1,5 @@
 export class LoginPage {
-  baseUrl = "http://localhost:3000/login";
+  baseUrl = "https://hrisdev.ace-energy.co.th/login";
 
   constructor(page) {
     this.page = page;
