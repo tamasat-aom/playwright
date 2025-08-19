@@ -6,14 +6,14 @@ export class LoginPage {
     this.page = page;
   }
 
-  async gotoLoginPage() {
+  async goto() {
     await this.page.goto(this.baseUrl);
   }
-  async setUsername(id, fill) {
-    await this.page.locator(`${id} input`).fill(fill);
+  async setUsername(fill) {
+    await this.page.locator("#user-name input").fill(fill);
   }
-  async setPassword(id, fill) {
-    await this.page.locator(`${id} input`).fill(fill);
+  async setPassword(fill) {
+    await this.page.locator("#password input").fill(fill);
   }
   async clickLogin() {
     await this.page.click("#login-button", { delay: 2000 });
