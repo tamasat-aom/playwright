@@ -10,6 +10,14 @@ export class LoginPage {
     await this.page.goto(this.baseUrl);
   }
   async setUsername(fill) {
+    // ใช้ extension playwright ในการช่วยเขียน
+
+    // await this.page
+    //   .locator("label")
+    //   .filter({ hasText: "รหัสพนักงาน" })
+    //   .fill(fill);
+    
+    // เขียนเองโดย match id
     await this.page.locator("#user-name input").fill(fill);
   }
   async setPassword(fill) {
