@@ -16,9 +16,12 @@ export class LoginPage {
     await this.page.locator("#password input").fill(fill);
   }
   async clickLogin() {
-    await this.page.click("#login-button", { delay: 2000 });
+    await this.page.click("#login-button");
   }
   async expectResult() {
     await expect(this.page).toHaveURL(/.*\/select-level/);
+  }
+  async failed() {
+    await expect(this.page).toHaveURL(/.*\/login/);
   }
 }

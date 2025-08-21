@@ -7,6 +7,5 @@ test.describe("Login", async () => {
     await loginPage.setPassword("P@ssw0rd");
     await loginPage.clickLogin();
     await loginPage.expectResult();
-    await loginPage.page.waitForTimeout(1500);
   });
 });
